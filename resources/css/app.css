@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+}
+
+/* Track (latar belakang scrollbar) */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Warna grey bening */
+    border-radius: 4px; /* Border radius */
+}
+
+/* Handle (bagian yang bisa digerakkan) */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Warna grey lebih gelap */
+    border-radius: 4px; /* Border radius */
+}
+
+/* Handle saat dihover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Warna grey lebih gelap saat dihover */
+}
+/* Member Confirmation Modal */
+#member-confirmation-modal {
+    transition: opacity 0.3s ease;
+}
+
+#member-confirmation-modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#member-confirmation-modal .modal-content {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+#member-confirmation-modal.hidden .modal-content {
+    transform: translateY(-20px);
+}
